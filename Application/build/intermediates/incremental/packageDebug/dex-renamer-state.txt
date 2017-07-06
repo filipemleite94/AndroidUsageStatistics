@@ -1,0 +1,7 @@
+#Wed Jul 05 14:11:33 BRT 2017
+base.0=C\:\\Users\\filip\\Downloads\\COMP\\Cecilia\\Exame\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_65cba3f44507a98eff93ee64f077ba5096390a40
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\filip\\Downloads\\COMP\\Cecilia\\Exame\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_57d918ff013f7808f700baab47078aeadce8f085\\classes.dex
+base.1=C\:\\Users\\filip\\Downloads\\COMP\\Cecilia\\Exame\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_57d918ff013f7808f700baab47078aeadce8f085
+file.0=C\:\\Users\\filip\\Downloads\\COMP\\Cecilia\\Exame\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_65cba3f44507a98eff93ee64f077ba5096390a40\\classes.dex

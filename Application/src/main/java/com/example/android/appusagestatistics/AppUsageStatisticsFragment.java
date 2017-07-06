@@ -49,6 +49,8 @@ public class AppUsageStatisticsFragment extends Fragment {
 
     private static final String TAG = AppUsageStatisticsFragment.class.getSimpleName();
 
+    private long beginTime = 0;
+
     //VisibleForTesting for variables below
     UsageStatsManager mUsageStatsManager;
     UsageListAdapter mUsageListAdapter;
@@ -136,10 +138,25 @@ public class AppUsageStatisticsFragment extends Fragment {
     public List<UsageStats> getUsageStatistics(int intervalType) {
         // Get the app statistics since one year ago from the current time.
         Calendar cal = Calendar.getInstance();
-        cal.add(Calendar.YEAR, -1);
+        List<UsageStats> queryUsageStats;
+        switch(intervalType){
+            case(UsageStatsManager.INTERVAL_DAILY):
+                cal.add(Calendar.DAY_OF_MONTH, -1);
+                break;
+            case(UsageStatsManager.INTERVAL_WEEKLY):
+                cal.add(Calendar.WEEK_OF_MONTH, -1);
+                break;
+            case(UsageStatsManager.INTERVAL_MONTHLY):
+                cal.add(Calendar.MONTH, -1);
+                break;
+            case(UsageStatsManager.INTERVAL_YEARLY):
+                cal.add(Calendar.YEAR, -1);
+                break;
+        }
+        beginTime = cal.getTimeInMillis();
 
-        List<UsageStats> queryUsageStats = mUsageStatsManager
-                .queryUsageStats(intervalType, cal.getTimeInMillis(),
+        queryUsageStats = mUsageStatsManager
+                .queryUsageStats(intervalType, beginTime,
                         System.currentTimeMillis());
 
         if (queryUsageStats.size() == 0) {
@@ -167,20 +184,41 @@ public class AppUsageStatisticsFragment extends Fragment {
     //VisibleForTesting
     void updateAppsList(List<UsageStats> usageStatsList) {
         List<CustomUsageStats> customUsageStatsList = new ArrayList<>();
+        long totalTime = 0;
+        List<String> packNames = new ArrayList<>();
+        String packageName;
         for (int i = 0; i < usageStatsList.size(); i++) {
             CustomUsageStats customUsageStats = new CustomUsageStats();
             customUsageStats.usageStats = usageStatsList.get(i);
-            try {
-                Drawable appIcon = getActivity().getPackageManager()
-                        .getApplicationIcon(customUsageStats.usageStats.getPackageName());
-                customUsageStats.appIcon = appIcon;
-            } catch (PackageManager.NameNotFoundException e) {
-                Log.w(TAG, String.format("App Icon is not found for %s",
-                        customUsageStats.usageStats.getPackageName()));
-                customUsageStats.appIcon = getActivity()
-                        .getDrawable(R.drawable.ic_default_app_launcher);
+            packageName = customUsageStats.usageStats.getPackageName();
+            if(packNames.contains(packageName)){
+                for(CustomUsageStats cUsrSt:customUsageStatsList){
+                    if(cUsrSt.usageStats.getPackageName()==packageName){
+                        cUsrSt.usageStats.add(customUsageStats.usageStats);
+                        totalTime+=customUsageStats.usageStats.getTotalTimeInForeground();
+                        break;
+                    }
+                }
+            }else {
+                try {
+                    Drawable appIcon = getActivity().getPackageManager()
+                            .getApplicationIcon(packageName);
+                    customUsageStats.appIcon = appIcon;
+                } catch (PackageManager.NameNotFoundException e) {
+                    Log.w(TAG, String.format("App Icon is not found for %s",
+                            customUsageStats.usageStats.getPackageName()));
+                    customUsageStats.appIcon = getActivity()
+                            .getDrawable(R.drawable.ic_default_app_launcher);
+                }
+                if (customUsageStats.usageStats.getLastTimeUsed() >= beginTime) {
+                    packNames.add(packageName);
+                    totalTime += customUsageStats.usageStats.getTotalTimeInForeground();
+                    customUsageStatsList.add(customUsageStats);
+                }
             }
-            customUsageStatsList.add(customUsageStats);
+        }
+        for(CustomUsageStats us : customUsageStatsList){
+            us.totalTimeFull = totalTime;
         }
         mUsageListAdapter.setCustomUsageStatsList(customUsageStatsList);
         mUsageListAdapter.notifyDataSetChanged();

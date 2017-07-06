@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\filip\.android\build-cache\2bd3d9385ed8400b4341dc8b948e3c0515a46daa\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d6a04527c17597019dad82777c5094a3d60d1c33">
+        <dex dex="C:\Users\filip\Downloads\COMP\Cecilia\Exame\Application\build\intermediates\transforms\dex\debug\folders\1000\10\classes_55f92df8a2c971b1d4b7ef6b4f37608c6b76275e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\filip\.android\build-cache\f1fbd49d9cf68b4e913fd023fae191ce1631c167\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="5cc5ef8347a6bafa14556cbd35230aa9b3431bb0">
+        <dex dex="C:\Users\filip\Downloads\COMP\Cecilia\Exame\Application\build\intermediates\transforms\dex\debug\folders\1000\10\classes_609e2e616bb880687c8fbd1a8e693c58ec3f668e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\filip\.android\build-cache\68d3685b6547da63e4a095bab12b040ea3918354\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="70f23cb87278f89aa51e6f57e8f0fd5266572d95">
+        <dex dex="C:\Users\filip\Downloads\COMP\Cecilia\Exame\Application\build\intermediates\transforms\dex\debug\folders\1000\10\classes_6b719f43fc7374d28dd44aadbb9fe08257f51f86\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\filip\.android\build-cache\0547268c4b1a27531b54398f12223592dcb34820\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="425c7b17887e5c3f8cbdf67ba171bc246f29b42c">
+        <dex dex="C:\Users\filip\Downloads\COMP\Cecilia\Exame\Application\build\intermediates\transforms\dex\debug\folders\1000\10\classes_4361897b98d59a1344e8d290ba387fa0f9464afc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\filip\.android\build-cache\97e1de27a82444103ec4869bb18472e472dbc439\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="a3e61044038fb54cddf6b8dc79f41d2b57f42caf">
+        <dex dex="C:\Users\filip\Downloads\COMP\Cecilia\Exame\Application\build\intermediates\transforms\dex\debug\folders\1000\10\classes_602addb089145a75e3d3082cada78d46f1978e3e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\filip\.android\build-cache\8d796e65ec0963dc874b130df5806ea02374e333\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="c5d103b270b3f3b50d8e6b44aa8e068b0de33426">
+        <dex dex="C:\Users\filip\Downloads\COMP\Cecilia\Exame\Application\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5dbe38f7fa934e93cbc02de0555d430d2aaba82e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\filip\.android\build-cache\89748345e6d5a25e6c35c78e069b591cc3cc74b9\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="09adf6e61abc0fe3b2cb5b1795a7033572475fad">
+        <dex dex="C:\Users\filip\Downloads\COMP\Cecilia\Exame\Application\build\intermediates\transforms\dex\debug\folders\1000\10\classes_11eb465f11eda10896596d1a6ff7db332972b178\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\filip\.android\build-cache\a82631a27f188a8c387a6a7228d61f5284d15ec0\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4b746ef0fd46acb5aaf3d9ab9a4cec22c28d3211">
+        <dex dex="C:\Users\filip\Downloads\COMP\Cecilia\Exame\Application\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ffca147e7498e5f69f010cb7fbe55efdb23fb04c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\filip\.android\build-cache\da8b91f8ac83a8c29c40da204cef0588eac0aed8\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="518768f3200963fbfec652f498da2c9d39245234">
+        <dex dex="C:\Users\filip\Downloads\COMP\Cecilia\Exame\Application\build\intermediates\transforms\dex\debug\folders\1000\10\classes_1b2ae6c39e0b483edeb78bec980abbb1c870281a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\filip\.android\build-cache\703856697e8e0eb340692bf305b5024b130d5845\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="93c10d68ab5ea070f15782ae6d3a28d1f1d8f45e">
+        <dex dex="C:\Users\filip\Downloads\COMP\Cecilia\Exame\Application\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0738eb930c34cdcf403afb245576669d31197d12\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\filip\.android\build-cache\972c8dae1a4924bea9ecbb495ff8e1b86509da7a\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="93c1199fcb0a34b980e6fff8350daff62e696ec2">
+        <dex dex="C:\Users\filip\Downloads\COMP\Cecilia\Exame\Application\build\intermediates\transforms\dex\debug\folders\1000\10\classes_2eebdbadb3771f39903db8694f9eb59c675d8350\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\filip\Downloads\COMP\Cecilia\Exame\Application\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="af00b7b4494bd825bdc4df4d5969ae0950b24850">
+        <dex dex="C:\Users\filip\Downloads\COMP\Cecilia\Exame\Application\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_65cba3f44507a98eff93ee64f077ba5096390a40\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\filip\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.0\support-annotations-25.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="dd84903d2e1af25a6081ef9038ad863cb14ca3a0">
+        <dex dex="C:\Users\filip\Downloads\COMP\Cecilia\Exame\Application\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.3.0_b983a8df7dba895b5ab8de8f98c1c839764e00f8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\filip\.android\build-cache\27eeeb2ab92fa29a4485795251602670c283e6c6\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\filip\Downloads\COMP\Cecilia\Exame\Application\build\intermediates\transforms\dex\debug\folders\1000\10\classes_9a6b70ccc261df5952251ffe54ff8b2918d619a4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\filip\Downloads\COMP\Cecilia\Exame\Application\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\Users\filip\Downloads\COMP\Cecilia\Exame\Application\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_57d918ff013f7808f700baab47078aeadce8f085\classes.dex" />
+    </item>
+
+</items>

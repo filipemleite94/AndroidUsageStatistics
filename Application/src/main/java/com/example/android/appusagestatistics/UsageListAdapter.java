@@ -27,7 +27,10 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Provide views to RecyclerView with the directory entries.
@@ -43,6 +46,8 @@ public class UsageListAdapter extends RecyclerView.Adapter<UsageListAdapter.View
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView mPackageName;
         private final TextView mLastTimeUsed;
+        private final TextView mTotalTimeUsed;
+        private final TextView mPercentageTimeUsed;
         private final ImageView mAppIcon;
 
         public ViewHolder(View v) {
@@ -50,6 +55,8 @@ public class UsageListAdapter extends RecyclerView.Adapter<UsageListAdapter.View
             mPackageName = (TextView) v.findViewById(R.id.textview_package_name);
             mLastTimeUsed = (TextView) v.findViewById(R.id.textview_last_time_used);
             mAppIcon = (ImageView) v.findViewById(R.id.app_icon);
+            mTotalTimeUsed = (TextView) v.findViewById(R.id.textview_total_time_used);
+            mPercentageTimeUsed = (TextView) v.findViewById(R.id.textview_use_percentage);
         }
 
         public TextView getLastTimeUsed() {
@@ -63,6 +70,10 @@ public class UsageListAdapter extends RecyclerView.Adapter<UsageListAdapter.View
         public ImageView getAppIcon() {
             return mAppIcon;
         }
+
+        public TextView getTotalTimeUsed(){return mTotalTimeUsed; }
+
+        public TextView getPercentageTimeUsed(){return mPercentageTimeUsed;}
     }
 
     public UsageListAdapter() {
@@ -75,13 +86,29 @@ public class UsageListAdapter extends RecyclerView.Adapter<UsageListAdapter.View
         return new ViewHolder(v);
     }
 
+
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
+        long totalTimeUsed = mCustomUsageStatsList.get(position).usageStats.getTotalTimeInForeground();
+        long totalTimeFull = mCustomUsageStatsList.get(position).totalTimeFull;
         viewHolder.getPackageName().setText(
                 mCustomUsageStatsList.get(position).usageStats.getPackageName());
         long lastTimeUsed = mCustomUsageStatsList.get(position).usageStats.getLastTimeUsed();
+        System.out.println(totalTimeUsed);
         viewHolder.getLastTimeUsed().setText(mDateFormat.format(new Date(lastTimeUsed)));
+        viewHolder.getTotalTimeUsed().setText(hhmmssFormat(totalTimeUsed));
         viewHolder.getAppIcon().setImageDrawable(mCustomUsageStatsList.get(position).appIcon);
+
+        viewHolder.getPercentageTimeUsed().setText(String.format("%.2f %%",(float)100*totalTimeUsed/totalTimeFull));
+    }
+
+    private String hhmmssFormat(long millis){
+        return String.format("%02dh%02dm%02ds",
+                TimeUnit.MILLISECONDS.toHours(millis),
+                TimeUnit.MILLISECONDS.toMinutes(millis) -
+                        TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millis)),
+                TimeUnit.MILLISECONDS.toSeconds(millis) -
+                        TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millis)));
     }
 
     @Override
